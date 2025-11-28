@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   position: relative;
   min-height: 100vh;
+  background: #ffffff;
 }
 
 body::before {
@@ -30,61 +32,108 @@ body::before {
   padding-right: 120px;
 }
 
+/* NAVBAR */
 .navbar {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 22px 0;
 }
 
 .nav-container {
   width: 100%;
-  background: white;
-  padding: 12px 26px;
+  background: #ffffff;
+  padding: 14px 30px;
   border: 2px solid #ff7373;
-  border-radius: 40px;
+  border-radius: 45px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.nav-container:hover {
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff5050;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
 }
 
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 42px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #222;
   font-size: 18px;
   position: relative;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ff5050;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff5050;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #111;
 }
 
 .nav-links a.active::after {
-  content: "";
-  position: absolute;
   width: 100%;
-  height: 2px;
-  background: black;
-  bottom: -3px;
-  left: 0;
+  background: #111;
 }
 
+/* NAV BUTTONS */
 .nav-buttons {
   display: flex;
-  gap: 12px;
+  gap: 14px;
+  align-items: center;
 }
 
 .nav-icons {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
   background: #ff6666;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition: 0.25s ease;
+}
+
+.nav-icons:hover {
+  background: #ff8383;
+  transform: translateY(-2px);
 }
