@@ -32,7 +32,6 @@ body::before {
   padding-right: 120px;
 }
 
-/* NAVBAR */
 .navbar {
   width: 100%;
   display: flex;
@@ -69,7 +68,6 @@ body::before {
   transform: translateY(-2px);
 }
 
-/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -114,7 +112,6 @@ body::before {
   background: #111;
 }
 
-/* NAV BUTTONS */
 .nav-buttons {
   display: flex;
   gap: 14px;
