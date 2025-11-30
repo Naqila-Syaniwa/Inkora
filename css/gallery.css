@@ -100,29 +100,36 @@ main {
 }
 
 .image-box {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   height: 300px;
-  background: #e0e0e0;
   border-radius: 10px;
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;   /* penting banget */
 }
 
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* tombol panah */
 .image-box button {
   position: absolute;
-  right: 12px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   border: none;
   background: white;
   border-radius: 50%;
-  padding: 8px 12px;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  transition: 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-box button:hover {
@@ -210,4 +217,71 @@ main {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 25px 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .post-body {
+    flex-direction: column;
+  }
+
+  .image-box {
+    width: 100%;
+    height: 230px;
+  }
+
+  .image-box button {
+    right: 8px;
+  }
+
+  .post {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 20px 14px;
+  }
+
+  .search-box input {
+    font-size: 12px;
+  }
+
+  .post-body {
+    gap: 15px;
+  }
+
+  .image-box {
+    height: 200px;
+  }
+
+  .profile-title {
+    font-size: 14px;
+  }
+
+  .post-info p {
+    font-size: 13px;
+  }
+
+  .options div {
+    width: 32px;
+    height: 32px;
+  }
+
+  .comment-bar {
+    font-size: 12px;
+  }
 }

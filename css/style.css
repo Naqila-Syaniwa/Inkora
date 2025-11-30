@@ -134,3 +134,44 @@ body::before {
   background: #ff8383;
   transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-container {
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 18px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-buttons img {
+    width: 26px;
+  }
+}
